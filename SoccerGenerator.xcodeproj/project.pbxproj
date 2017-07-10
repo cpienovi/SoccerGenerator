@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		25743D5B1F0F0AFC005F9A95 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 25743D5A1F0F0AFC005F9A95 /* GoogleService-Info.plist */; };
+		25743D5D1F0F0DFD005F9A95 /* NewTournamentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25743D5C1F0F0DFD005F9A95 /* NewTournamentController.swift */; };
 		25AF964B1F0480AB00A04418 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AF964A1F0480AB00A04418 /* AppDelegate.swift */; };
 		25AF964D1F0480AB00A04418 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AF964C1F0480AB00A04418 /* ViewController.swift */; };
 		25AF96501F0480AB00A04418 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25AF964E1F0480AB00A04418 /* Main.storyboard */; };
@@ -14,7 +16,6 @@
 		25AF96551F0480AB00A04418 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25AF96531F0480AB00A04418 /* LaunchScreen.storyboard */; };
 		25AF96601F0480AB00A04418 /* SoccerGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AF965F1F0480AB00A04418 /* SoccerGeneratorTests.swift */; };
 		25AF966B1F0480AB00A04418 /* SoccerGeneratorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AF966A1F0480AB00A04418 /* SoccerGeneratorUITests.swift */; };
-		25DF58CC1F0DC39B00640723 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 25DF58CB1F0DC39B00640723 /* GoogleService-Info.plist */; };
 		2F82168AA536B39286FD8ED0 /* Pods_SoccerGenerator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2742DB3607526EAD068677CA /* Pods_SoccerGenerator.framework */; };
 		318E1DCC10B2408D1472A04C /* Pods_SoccerGeneratorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03768C82802D50A2A30325B6 /* Pods_SoccerGeneratorUITests.framework */; };
 		EB54B137036E974BFE8006DA /* Pods_SoccerGeneratorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FACEC8061547345C1C98B269 /* Pods_SoccerGeneratorTests.framework */; };
@@ -39,6 +40,8 @@
 
 /* Begin PBXFileReference section */
 		03768C82802D50A2A30325B6 /* Pods_SoccerGeneratorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoccerGeneratorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		25743D5A1F0F0AFC005F9A95 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		25743D5C1F0F0DFD005F9A95 /* NewTournamentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewTournamentController.swift; sourceTree = "<group>"; };
 		25AF96471F0480AB00A04418 /* SoccerGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoccerGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25AF964A1F0480AB00A04418 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		25AF964C1F0480AB00A04418 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -52,7 +55,6 @@
 		25AF96661F0480AB00A04418 /* SoccerGeneratorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoccerGeneratorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		25AF966A1F0480AB00A04418 /* SoccerGeneratorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoccerGeneratorUITests.swift; sourceTree = "<group>"; };
 		25AF966C1F0480AB00A04418 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		25DF58CB1F0DC39B00640723 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2742DB3607526EAD068677CA /* Pods_SoccerGenerator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoccerGenerator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E2AD95FB513C2C76DED74B4 /* Pods-SoccerGeneratorUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoccerGeneratorUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SoccerGeneratorUITests/Pods-SoccerGeneratorUITests.release.xcconfig"; sourceTree = "<group>"; };
 		5E7819837CC16328E91A0193 /* Pods-SoccerGenerator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoccerGenerator.release.xcconfig"; path = "Pods/Target Support Files/Pods-SoccerGenerator/Pods-SoccerGenerator.release.xcconfig"; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 		25AF963E1F0480AB00A04418 = {
 			isa = PBXGroup;
 			children = (
+				25743D5A1F0F0AFC005F9A95 /* GoogleService-Info.plist */,
 				25AF96491F0480AB00A04418 /* SoccerGenerator */,
 				25AF965E1F0480AB00A04418 /* SoccerGeneratorTests */,
 				25AF96691F0480AB00A04418 /* SoccerGeneratorUITests */,
@@ -119,10 +122,10 @@
 				25AF964A1F0480AB00A04418 /* AppDelegate.swift */,
 				25AF964C1F0480AB00A04418 /* ViewController.swift */,
 				25AF964E1F0480AB00A04418 /* Main.storyboard */,
-				25DF58CB1F0DC39B00640723 /* GoogleService-Info.plist */,
 				25AF96511F0480AB00A04418 /* Assets.xcassets */,
 				25AF96531F0480AB00A04418 /* LaunchScreen.storyboard */,
 				25AF96561F0480AB00A04418 /* Info.plist */,
+				25743D5C1F0F0DFD005F9A95 /* NewTournamentController.swift */,
 			);
 			path = SoccerGenerator;
 			sourceTree = "<group>";
@@ -285,7 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				25AF96551F0480AB00A04418 /* LaunchScreen.storyboard in Resources */,
-				25DF58CC1F0DC39B00640723 /* GoogleService-Info.plist in Resources */,
+				25743D5B1F0F0AFC005F9A95 /* GoogleService-Info.plist in Resources */,
 				25AF96521F0480AB00A04418 /* Assets.xcassets in Resources */,
 				25AF96501F0480AB00A04418 /* Main.storyboard in Resources */,
 			);
@@ -452,6 +455,7 @@
 			files = (
 				25AF964D1F0480AB00A04418 /* ViewController.swift in Sources */,
 				25AF964B1F0480AB00A04418 /* AppDelegate.swift in Sources */,
+				25743D5D1F0F0DFD005F9A95 /* NewTournamentController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
