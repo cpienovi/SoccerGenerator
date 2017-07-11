@@ -35,7 +35,8 @@ class Tournament: Mappable {
     
     func saveToFireBase(database: DatabaseReference) {
         let dictionary = Mapper<Tournament>().toJSON(self)
-        database.child("tournaments").childByAutoId().setValue(dictionary)
+        let child = database.child("tournaments").childByAutoId()
+        child.updateChildValues(dictionary)
     }
     
     func imprimir() {
