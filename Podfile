@@ -8,6 +8,7 @@ target 'SoccerGenerator' do
   # Pods for SoccerGenerator
   pod 'Firebase/Core'
   pod 'Firebase/Database'
+  pod 'ObjectMapper'
 
   target 'SoccerGeneratorTests' do
     inherit! :search_paths

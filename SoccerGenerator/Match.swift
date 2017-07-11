@@ -7,14 +7,15 @@
 //
 
 import Foundation
+import ObjectMapper
 
-class Match {
+class Match: Mappable {
     
-    var local: NewPlayer
-    var away: NewPlayer
-    var localGoals: Int
-    var awayGoals: Int
-    var played: Bool
+    var local: NewPlayer? = nil
+    var away: NewPlayer? = nil
+    var localGoals: Int = 0
+    var awayGoals: Int = 0
+    var played: Bool = false
     
     init(local: NewPlayer, away: NewPlayer) {
         self.local = local
@@ -22,6 +23,18 @@ class Match {
         self.localGoals = 0
         self.awayGoals = 0
         self.played = false
+    }
+    
+    required public init?(map: Map) {
+        
+    }
+    
+    public func mapping(map: Map) {
+        local    <- map["local"]
+        away    <- map["away"]
+        localGoals    <- map["localGoals"]
+        awayGoals    <- map["awayGoals"]
+        played    <- map["played"]
     }
     
 }

@@ -144,6 +144,7 @@ class NewTournamentController: UIViewController, UITableViewDelegate, UITableVie
         let tournamentName = self.tournamentNameLabel.text
         let tournament = Tournament(name: tournamentName!, schedule: schedule)
         tournament.saveToFireBase(database: self.database)
+        self.dismiss(animated: true, completion: nil)
     }
 
 }

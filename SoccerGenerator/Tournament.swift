@@ -8,15 +8,25 @@
 
 import Foundation
 import FirebaseDatabase
+import ObjectMapper
 
-class Tournament {
+class Tournament: Mappable {
     
-    var name: String
-    var schedule: [[Match]]
+    var name: String = ""
+    var schedule: [[Match]] = [[Match]]()
     
     init(name: String, schedule: [[Match]]) {
         self.name = name
         self.schedule = schedule
+    }
+    
+    required public init?(map: Map) {
+        
+    }
+    
+    public func mapping(map: Map) {
+        name        <- map["name"]
+        schedule    <- map["schedule"]
     }
     
     func addRound(matches: [Match]) {
@@ -24,7 +34,8 @@ class Tournament {
     }
     
     func saveToFireBase(database: DatabaseReference) {
-        
+        let dictionary = Mapper<Tournament>().toJSON(self)
+        database.child("tournaments").childByAutoId().setValue(dictionary)
     }
     
     func imprimir() {
@@ -33,8 +44,8 @@ class Tournament {
             print("Round #\(round)")
             for i in 0...matches.count - 1 {
                 let match = matches[i]
-                let local = match.local.name
-                let away = match.away.name
+                let local = match.local?.name
+                let away = match.away?.name
                 print("Match: \(local!) vs \(away!)")
             }
         }

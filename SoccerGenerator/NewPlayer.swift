@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import ObjectMapper
 
-class NewPlayer {
+class NewPlayer: Mappable {
     
     var name : String?
     var team: String?
@@ -16,6 +17,15 @@ class NewPlayer {
     init(name: String, team: String) {
         self.name = name
         self.team = team
+    }
+    
+    required public init?(map: Map) {
+        
+    }
+    
+    public func mapping(map: Map) {
+        name    <- map["name"]
+        team    <- map["team"]
     }
     
 }
