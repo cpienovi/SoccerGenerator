@@ -91,7 +91,11 @@
                                                 <action selector="onCancelClick:" destination="WR6-G3-ChX" id="VSA-5i-epJ"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Create" id="XSl-KZ-MGe"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Create" id="XSl-KZ-MGe">
+                                            <connections>
+                                                <action selector="onCreateClick:" destination="WR6-G3-ChX" id="cH3-Eo-isP"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -252,6 +256,7 @@
                     <connections>
                         <outlet property="numPlayersLabel" destination="suW-Wv-VT7" id="Qth-Uy-kGK"/>
                         <outlet property="tableView" destination="0LT-pa-DTT" id="raL-ig-M2q"/>
+                        <outlet property="tournamentNameLabel" destination="hm4-R7-ulI" id="bdH-jZ-be2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5ko-hy-GRp" userLabel="First Responder" sceneMemberID="firstResponder"/>
