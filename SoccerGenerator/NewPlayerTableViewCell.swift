@@ -13,4 +13,5 @@ class NewPlayerTableViewCell: UITableViewCell {
     
     @IBOutlet weak var nameLabel: UITextField!
     
+    @IBOutlet weak var teamTextField: UITextField!
 }

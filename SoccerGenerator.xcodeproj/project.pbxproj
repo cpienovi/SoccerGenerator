@@ -10,6 +10,7 @@
 		2565B1401F14524900A37762 /* NewPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2565B13F1F14524900A37762 /* NewPlayer.swift */; };
 		2565B1421F1456DC00A37762 /* NewPlayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2565B1411F1456DC00A37762 /* NewPlayerTableViewCell.swift */; };
 		2565B1461F14771D00A37762 /* TeamUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2565B1451F14771D00A37762 /* TeamUtils.swift */; };
+		2565B1481F14947100A37762 /* SearchTeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2565B1471F14947100A37762 /* SearchTeamViewController.swift */; };
 		25743D5B1F0F0AFC005F9A95 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 25743D5A1F0F0AFC005F9A95 /* GoogleService-Info.plist */; };
 		25743D5D1F0F0DFD005F9A95 /* NewTournamentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25743D5C1F0F0DFD005F9A95 /* NewTournamentController.swift */; };
 		25AF964B1F0480AB00A04418 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AF964A1F0480AB00A04418 /* AppDelegate.swift */; };
@@ -46,6 +47,7 @@
 		2565B13F1F14524900A37762 /* NewPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPlayer.swift; sourceTree = "<group>"; };
 		2565B1411F1456DC00A37762 /* NewPlayerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPlayerTableViewCell.swift; sourceTree = "<group>"; };
 		2565B1451F14771D00A37762 /* TeamUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamUtils.swift; sourceTree = "<group>"; };
+		2565B1471F14947100A37762 /* SearchTeamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTeamViewController.swift; sourceTree = "<group>"; };
 		25743D5A1F0F0AFC005F9A95 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		25743D5C1F0F0DFD005F9A95 /* NewTournamentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewTournamentController.swift; sourceTree = "<group>"; };
 		25AF96471F0480AB00A04418 /* SoccerGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoccerGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,6 +137,7 @@
 				2565B13F1F14524900A37762 /* NewPlayer.swift */,
 				2565B1411F1456DC00A37762 /* NewPlayerTableViewCell.swift */,
 				2565B1451F14771D00A37762 /* TeamUtils.swift */,
+				2565B1471F14947100A37762 /* SearchTeamViewController.swift */,
 			);
 			path = SoccerGenerator;
 			sourceTree = "<group>";
@@ -462,6 +465,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2565B1481F14947100A37762 /* SearchTeamViewController.swift in Sources */,
 				25AF964D1F0480AB00A04418 /* ViewController.swift in Sources */,
 				2565B1401F14524900A37762 /* NewPlayer.swift in Sources */,
 				25AF964B1F0480AB00A04418 /* AppDelegate.swift in Sources */,

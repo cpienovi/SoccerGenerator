@@ -176,12 +176,12 @@ public class TeamUtils {
             "Borussia M'gladbach",
             "SC Freiburg",
             "Hamburger SV",
-            "1. FC Köln",
+            "FC Köln",
             "Bayer 04 Leverkusen",
             "FC Schalke 04",
             "SV Werder Bremen",
             "Hertha BSC",
-            "1. FSV Mainz 05",
+            "FSV Mainz 05",
             "VfL Wolfsburg",
             "Eintracht Frankfurt",
             "TSG 1899 Hoffenheim",
@@ -190,24 +190,24 @@ public class TeamUtils {
             "FC Ingolstadt 04",
             "RB Leipzig",
             // BUNDESLIGA 2
-            "1. FC Kaiserslautern",
+            "FC Kaiserslautern",
             "TSV 1860 München",
             "VfB Stuttgart",
             "Arminia Bielefeld",
             "VfL Bochum",
             "SpVgg Greuther Fürth",
-            "1. FC Nürnberg",
+            "FC Nürnberg",
             "Hannover 96",
             "Dynamo Dresden",
             "Erzgebirge Aue",
-            "1. FC Union Berlin",
+            "FC Union Berlin",
             "Karlsruher SC",
             "SV Sandhausen",
             "Würzburger Kickers",
             "FC St. Pauli",
             "Eintracht Braunschweig",
             "Fortuna Düsseldorf",
-            "1. FC Heidenheim",
+            "FC Heidenheim",
             // CALCIO A
             "Atalanta",
             "Inter",
@@ -732,6 +732,7 @@ public class TeamUtils {
             "Talleres de Córdoba",
             "Sarmiento",
             "Temperley"
-    ]
+    ].sorted { $0.localizedCaseInsensitiveCompare($1) == ComparisonResult.orderedAscending }
+
     
 }

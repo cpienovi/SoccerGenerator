@@ -71,8 +71,10 @@ class NewTournamentController: UIViewController, UITableViewDelegate, UITableVie
         
         cell.nameLabel.text = player.name
         cell.nameLabel.tag = indexPath.row
-        cell.nameLabel.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        cell.nameLabel.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: .editingChanged)
         
+        cell.teamTextField.addTarget(self, action: #selector(self.teamTouch(_:)), for: .editingDidBegin)
+
         return cell
     }
     
@@ -81,4 +83,11 @@ class NewTournamentController: UIViewController, UITableViewDelegate, UITableVie
         self.players[position].name = textField.text
     }
     
+    func teamTouch(_ textField: UITextField) {
+        if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "searchTeamViewController") as? SearchTeamViewController
+        {
+            present(viewController, animated: true, completion: nil)
+        }
+    }
+
 }

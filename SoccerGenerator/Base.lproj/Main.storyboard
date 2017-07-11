@@ -164,7 +164,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="p3c-dP-499" id="c7U-HU-lt6">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="1mk-OM-UDK">
@@ -222,6 +222,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="nameLabel" destination="wIf-U3-yne" id="q6F-xP-NhL"/>
+                                            <outlet property="teamTextField" destination="fk8-y7-zTb" id="wy7-vF-vj2"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -256,6 +257,79 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5ko-hy-GRp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1768.8" y="1012.4437781109445"/>
+        </scene>
+        <!--Search Team View Controller-->
+        <scene sceneID="vr2-0c-xtS">
+            <objects>
+                <viewController storyboardIdentifier="searchTeamViewController" id="4OR-Kz-IcX" customClass="SearchTeamViewController" customModule="SoccerGenerator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nzO-av-RJW"/>
+                        <viewControllerLayoutGuide type="bottom" id="b5Q-YO-avv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kvi-bW-EFH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WZI-xL-XWg">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TeamCellIdentifier" textLabel="Ivq-pE-nDa" style="IBUITableViewCellStyleDefault" id="CES-k8-buG">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CES-k8-buG" id="ljU-ry-H4L">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ivq-pE-nDa">
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="4OR-Kz-IcX" id="eTY-6d-YDK"/>
+                                    <outlet property="delegate" destination="4OR-Kz-IcX" id="ufx-Xj-EBe"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WZI-xL-XWg" firstAttribute="leading" secondItem="kvi-bW-EFH" secondAttribute="leading" id="9jC-Ch-4RL"/>
+                            <constraint firstItem="b5Q-YO-avv" firstAttribute="top" secondItem="WZI-xL-XWg" secondAttribute="bottom" id="CxL-vy-V76"/>
+                            <constraint firstItem="WZI-xL-XWg" firstAttribute="top" secondItem="nzO-av-RJW" secondAttribute="bottom" id="bUL-T6-oLJ"/>
+                            <constraint firstAttribute="trailing" secondItem="WZI-xL-XWg" secondAttribute="trailing" id="vCz-1T-O7Y"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="wgd-rx-tNs" id="5xv-F5-c6x"/>
+                        <outlet property="tableView" destination="WZI-xL-XWg" id="F1D-jA-Dpg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UHF-xJ-zCs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="FYn-JK-bnm">
+                    <connections>
+                        <outlet property="delegate" destination="4OR-Kz-IcX" id="pvC-hw-RQa"/>
+                        <outlet property="searchContentsController" destination="4OR-Kz-IcX" id="dQf-Da-GF4"/>
+                        <outlet property="searchResultsDataSource" destination="4OR-Kz-IcX" id="ooC-EZ-Goc"/>
+                        <outlet property="searchResultsDelegate" destination="4OR-Kz-IcX" id="moE-XC-kfM"/>
+                    </connections>
+                </searchDisplayController>
+                <searchDisplayController id="wgd-rx-tNs">
+                    <connections>
+                        <outlet property="delegate" destination="4OR-Kz-IcX" id="xkO-CH-pi7"/>
+                        <outlet property="searchContentsController" destination="4OR-Kz-IcX" id="BW7-f1-7uM"/>
+                        <outlet property="searchResultsDataSource" destination="4OR-Kz-IcX" id="aC6-Cm-vuh"/>
+                        <outlet property="searchResultsDelegate" destination="4OR-Kz-IcX" id="SM2-bW-2BY"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="2826" y="1013"/>
         </scene>
         <!--Tournament-->
         <scene sceneID="PXI-yq-LzZ">
