@@ -10,7 +10,7 @@ import Foundation
 import FirebaseDatabase
 import ObjectMapper
 
-class Tournament: Mappable {
+public class Tournament: Mappable {
     
     var name: String = ""
     var schedule: [[Match]] = [[Match]]()
@@ -31,6 +31,14 @@ class Tournament: Mappable {
     
     func addRound(matches: [Match]) {
         self.schedule.append(matches)
+    }
+    
+    func toRounds() -> [Int: [Match]] {
+        var result: [Int: [Match]] = [Int: [Match]]()
+        for round in 0...(self.schedule.count - 1) {
+            result[round] = self.schedule[round]
+        }
+        return result
     }
     
     func saveToFireBase(database: DatabaseReference) {

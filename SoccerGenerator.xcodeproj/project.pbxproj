@@ -23,6 +23,9 @@
 		25C715591F1506C200AF1A60 /* Tournament.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C715581F1506C200AF1A60 /* Tournament.swift */; };
 		25C7155D1F15070A00AF1A60 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C7155C1F15070A00AF1A60 /* Match.swift */; };
 		25C7155F1F15349600AF1A60 /* MyTournamentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C7155E1F15349600AF1A60 /* MyTournamentsViewController.swift */; };
+		25C715631F1563A600AF1A60 /* StorageUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C715621F1563A600AF1A60 /* StorageUtils.swift */; };
+		25C715651F156CF200AF1A60 /* FixtureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C715641F156CF200AF1A60 /* FixtureViewController.swift */; };
+		25C715671F15760C00AF1A60 /* RoundTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C715661F15760C00AF1A60 /* RoundTableViewCell.swift */; };
 		2F82168AA536B39286FD8ED0 /* Pods_SoccerGenerator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2742DB3607526EAD068677CA /* Pods_SoccerGenerator.framework */; };
 		318E1DCC10B2408D1472A04C /* Pods_SoccerGeneratorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03768C82802D50A2A30325B6 /* Pods_SoccerGeneratorUITests.framework */; };
 		EB54B137036E974BFE8006DA /* Pods_SoccerGeneratorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FACEC8061547345C1C98B269 /* Pods_SoccerGeneratorTests.framework */; };
@@ -69,6 +72,9 @@
 		25C715581F1506C200AF1A60 /* Tournament.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tournament.swift; sourceTree = "<group>"; };
 		25C7155C1F15070A00AF1A60 /* Match.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
 		25C7155E1F15349600AF1A60 /* MyTournamentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTournamentsViewController.swift; sourceTree = "<group>"; };
+		25C715621F1563A600AF1A60 /* StorageUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageUtils.swift; sourceTree = "<group>"; };
+		25C715641F156CF200AF1A60 /* FixtureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FixtureViewController.swift; sourceTree = "<group>"; };
+		25C715661F15760C00AF1A60 /* RoundTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundTableViewCell.swift; sourceTree = "<group>"; };
 		2742DB3607526EAD068677CA /* Pods_SoccerGenerator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoccerGenerator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E2AD95FB513C2C76DED74B4 /* Pods-SoccerGeneratorUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoccerGeneratorUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SoccerGeneratorUITests/Pods-SoccerGeneratorUITests.release.xcconfig"; sourceTree = "<group>"; };
 		5E7819837CC16328E91A0193 /* Pods-SoccerGenerator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoccerGenerator.release.xcconfig"; path = "Pods/Target Support Files/Pods-SoccerGenerator/Pods-SoccerGenerator.release.xcconfig"; sourceTree = "<group>"; };
@@ -142,9 +148,12 @@
 				25AF96561F0480AB00A04418 /* Info.plist */,
 				25743D5C1F0F0DFD005F9A95 /* NewTournamentController.swift */,
 				2565B1411F1456DC00A37762 /* NewPlayerTableViewCell.swift */,
+				25C715661F15760C00AF1A60 /* RoundTableViewCell.swift */,
 				2565B1451F14771D00A37762 /* TeamUtils.swift */,
 				2565B1471F14947100A37762 /* SearchTeamViewController.swift */,
 				25C7155E1F15349600AF1A60 /* MyTournamentsViewController.swift */,
+				25C715621F1563A600AF1A60 /* StorageUtils.swift */,
+				25C715641F156CF200AF1A60 /* FixtureViewController.swift */,
 			);
 			path = SoccerGenerator;
 			sourceTree = "<group>";
@@ -482,6 +491,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25C715651F156CF200AF1A60 /* FixtureViewController.swift in Sources */,
+				25C715671F15760C00AF1A60 /* RoundTableViewCell.swift in Sources */,
 				25C715591F1506C200AF1A60 /* Tournament.swift in Sources */,
 				2565B1481F14947100A37762 /* SearchTeamViewController.swift in Sources */,
 				25C7155D1F15070A00AF1A60 /* Match.swift in Sources */,
@@ -491,6 +502,7 @@
 				25743D5D1F0F0DFD005F9A95 /* NewTournamentController.swift in Sources */,
 				2565B1461F14771D00A37762 /* TeamUtils.swift in Sources */,
 				2565B1421F1456DC00A37762 /* NewPlayerTableViewCell.swift in Sources */,
+				25C715631F1563A600AF1A60 /* StorageUtils.swift in Sources */,
 				25C7155F1F15349600AF1A60 /* MyTournamentsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
