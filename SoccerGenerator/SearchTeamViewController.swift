@@ -15,6 +15,7 @@ class SearchTeamViewController: UIViewController, UITableViewDelegate, UITableVi
     
     @IBOutlet weak var tableView: UITableView!
     
+    var delegate: TeamSelectDelegate?
     var teams = [String]()
     var filteredTeams = [String]()
     let searchController = UISearchController(searchResultsController: nil)
@@ -65,7 +66,16 @@ class SearchTeamViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        print("did select row at")
+        let team: String
+        if searchController.isActive && searchController.searchBar.text != "" {
+            team = filteredTeams[indexPath.row]
+            self.searchController.dismiss(animated: false, completion: nil)
+        } else {
+            team = teams[indexPath.row]
+        }
+        self.delegate?.teamSelected(team: team)
+        self.dismiss(animated: true, completion: nil)
     }
     
 }

@@ -9,12 +9,17 @@
 import Foundation
 import UIKit
 
-class NewTournamentController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+protocol TeamSelectDelegate: class {
+    func teamSelected(team: String)
+}
+
+class NewTournamentController: UIViewController, UITableViewDelegate, UITableViewDataSource, TeamSelectDelegate {
     
     static let playerCellIdentifier = "PlayerCellIdentifier"
     static let minPlayers = 2
     
     var players = [NewPlayer]()
+    var teamPosition: Int?
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var numPlayersLabel: UILabel!
@@ -73,6 +78,8 @@ class NewTournamentController: UIViewController, UITableViewDelegate, UITableVie
         cell.nameLabel.tag = indexPath.row
         cell.nameLabel.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: .editingChanged)
         
+        cell.teamTextField.text = player.team
+        cell.teamTextField.tag = indexPath.row
         cell.teamTextField.addTarget(self, action: #selector(self.teamTouch(_:)), for: .editingDidBegin)
 
         return cell
@@ -86,7 +93,16 @@ class NewTournamentController: UIViewController, UITableViewDelegate, UITableVie
     func teamTouch(_ textField: UITextField) {
         if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "searchTeamViewController") as? SearchTeamViewController
         {
+            teamPosition = textField.tag
+            viewController.delegate = self
             present(viewController, animated: true, completion: nil)
+        }
+    }
+    
+    func teamSelected(team: String) {
+        if let position = teamPosition {
+            self.players[position].team = team
+            self.tableView.reloadData()
         }
     }
 
