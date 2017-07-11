@@ -26,6 +26,9 @@ class NewTournamentController: UIViewController, UITableViewDelegate, UITableVie
         let playerTwo = NewPlayer(name: "", team: "")
         players.append(playerOne)
         players.append(playerTwo)
+        
+        self.tableView.estimatedRowHeight = 80
+        self.tableView.rowHeight = UITableViewAutomaticDimension
     }
     
     override func didReceiveMemoryWarning() {
@@ -35,7 +38,6 @@ class NewTournamentController: UIViewController, UITableViewDelegate, UITableVie
     
     @IBAction func onCancelClick(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
-        print(self.players)
     }
     
     @IBAction func onMinusClick(_ sender: Any) {

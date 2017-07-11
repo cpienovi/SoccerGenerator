@@ -164,33 +164,60 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="p3c-dP-499" id="c7U-HU-lt6">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="4kM-EZ-3Iq">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="1mk-OM-UDK">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQF-la-ZDi">
-                                                            <rect key="frame" x="8" y="8" width="179.5" height="27.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wIf-U3-yne">
-                                                            <rect key="frame" x="187.5" y="8" width="179.5" height="27.5"/>
-                                                            <nil key="textColor"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <textInputTraits key="textInputTraits"/>
-                                                        </textField>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="4kM-EZ-3Iq">
+                                                            <rect key="frame" x="0.0" y="0.0" width="375" height="22"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQF-la-ZDi">
+                                                                    <rect key="frame" x="8" y="8" width="179.5" height="6"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wIf-U3-yne">
+                                                                    <rect key="frame" x="187.5" y="8" width="179.5" height="6"/>
+                                                                    <nil key="textColor"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                    <textInputTraits key="textInputTraits"/>
+                                                                </textField>
+                                                            </subviews>
+                                                            <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="rwd-PS-dMo">
+                                                            <rect key="frame" x="0.0" y="22" width="375" height="22"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eRO-LS-mHF">
+                                                                    <rect key="frame" x="8" y="8" width="179.5" height="6"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fk8-y7-zTb">
+                                                                    <rect key="frame" x="187.5" y="8" width="179.5" height="6"/>
+                                                                    <nil key="textColor"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                    <textInputTraits key="textInputTraits"/>
+                                                                </textField>
+                                                            </subviews>
+                                                            <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                                        </stackView>
                                                     </subviews>
-                                                    <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="4kM-EZ-3Iq" secondAttribute="trailing" id="Myc-IJ-0xT"/>
+                                                        <constraint firstItem="4kM-EZ-3Iq" firstAttribute="leading" secondItem="1mk-OM-UDK" secondAttribute="leading" id="tOv-WO-Asg"/>
+                                                    </constraints>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="4kM-EZ-3Iq" secondAttribute="bottom" id="86g-mg-AiG"/>
-                                                <constraint firstItem="4kM-EZ-3Iq" firstAttribute="leading" secondItem="c7U-HU-lt6" secondAttribute="leading" id="DYG-Ay-uUs"/>
-                                                <constraint firstAttribute="trailing" secondItem="4kM-EZ-3Iq" secondAttribute="trailing" id="HQb-NN-Sxl"/>
-                                                <constraint firstItem="4kM-EZ-3Iq" firstAttribute="top" secondItem="c7U-HU-lt6" secondAttribute="top" id="Rgx-Pb-9mV"/>
+                                                <constraint firstAttribute="bottom" secondItem="1mk-OM-UDK" secondAttribute="bottom" id="eug-vb-Hk7"/>
+                                                <constraint firstAttribute="trailing" secondItem="1mk-OM-UDK" secondAttribute="trailing" id="hQ2-3B-Hkh"/>
+                                                <constraint firstItem="1mk-OM-UDK" firstAttribute="top" secondItem="c7U-HU-lt6" secondAttribute="top" id="pCh-f3-hBc"/>
+                                                <constraint firstItem="1mk-OM-UDK" firstAttribute="leading" secondItem="c7U-HU-lt6" secondAttribute="leading" id="sEb-BH-3fP"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
