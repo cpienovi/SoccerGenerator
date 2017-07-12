@@ -23,6 +23,7 @@ class PositionsViewController: UIViewController, UITabBarControllerDelegate, UIT
     }
     
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+        print("tab selected")
         if (viewController == self) {
             updateUI()
         }
@@ -35,6 +36,7 @@ class PositionsViewController: UIViewController, UITabBarControllerDelegate, UIT
         } else {
             self.items.removeAll()
         }
+        print("update UI")
         self.tableView.reloadData()
     }
     
@@ -45,6 +47,22 @@ class PositionsViewController: UIViewController, UITabBarControllerDelegate, UIT
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: PositionsViewController.cellIdentifier, for: indexPath) as! PositionTableViewCell
         let position = self.items[indexPath.row]
+        
+        if(indexPath.row % 2 == 0) {
+            cell.backgroundColor = UIColor(red: 224/255.0, green: 224/255.0, blue: 224/255.0, alpha: 0.5)
+        } else {
+            cell.backgroundColor = UIColor.white
+        }
+        
+        cell.teamLabel.text = position.team
+        cell.playedLabel.text = String(position.played)
+        cell.winsLabel.text = String(position.wins)
+        cell.drawsLabel.text = String(position.draws)
+        cell.lossesLabel.text = String(position.losses)
+        cell.scoredLabel.text = String(position.scored)
+        cell.againstLabel.text = String(position.against)
+        cell.differenceLabel.text = String(position.difference)
+        cell.pointsLabel.text = String(position.points)
         
         return cell
     }

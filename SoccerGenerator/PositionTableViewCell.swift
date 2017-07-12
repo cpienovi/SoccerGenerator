@@ -11,6 +11,14 @@ import UIKit
 
 class PositionTableViewCell: UITableViewCell {
     
-    
+    @IBOutlet weak var scoredLabel: UILabel!
+    @IBOutlet weak var pointsLabel: UILabel!
+    @IBOutlet weak var differenceLabel: UILabel!
+    @IBOutlet weak var againstLabel: UILabel!
+    @IBOutlet weak var teamLabel: UILabel!
+    @IBOutlet weak var playedLabel: UILabel!
+    @IBOutlet weak var lossesLabel: UILabel!
+    @IBOutlet weak var winsLabel: UILabel!
+    @IBOutlet weak var drawsLabel: UILabel!
     
 }

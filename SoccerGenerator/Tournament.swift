@@ -56,7 +56,7 @@ public class Tournament: Mappable {
             }
         }
         
-        return result
+        return result.sorted(by: { $0.points > $1.points })
     }
     
     private func sumGoals(match: Match, positions: [Position]) -> [Position] {

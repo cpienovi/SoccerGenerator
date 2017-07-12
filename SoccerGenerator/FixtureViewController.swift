@@ -66,16 +66,16 @@ class FixtureViewController: UIViewController, UITabBarControllerDelegate, UITab
         cell.awayTeamLabel.text = match.away?.team
         
         var score: String
-//        var backgroundColor: UIColor
+        var backgroundColor: UIColor
         if (match.played) {
-//            backgroundColor = UIColor.blue
+            backgroundColor = UIColor(red: 155/255.0, green: 193/255.0, blue: 255/255.0, alpha: 0.5)
             score = "\(match.localGoals) - \(match.awayGoals)"
         } else {
-//            backgroundColor = UIColor.green
+            backgroundColor = UIColor(red: 155/255.0, green: 255/255.0, blue: 167/255.0, alpha: 0.5)
             score = "-"
         }
         
-//        cell.backgroundColor = backgroundColor
+        cell.backgroundColor = backgroundColor
         cell.scoreLabel.text = score
         
         return cell
