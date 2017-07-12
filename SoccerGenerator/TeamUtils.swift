@@ -496,7 +496,6 @@ public class TeamUtils {
             "Classic XI",
             "MLS All Stars",
             "Avaí",
-            "adidas All-Star Team",
             // MEN'S NATIONAL
             "England",
             "Austria",

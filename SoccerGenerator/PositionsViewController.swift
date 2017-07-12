@@ -23,7 +23,7 @@ class PositionsViewController: UIViewController, UITabBarControllerDelegate, UIT
     }
     
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-        print("tab selected")
+        print("tab selected positions view controller")
         if (viewController == self) {
             updateUI()
         }
@@ -36,7 +36,6 @@ class PositionsViewController: UIViewController, UITabBarControllerDelegate, UIT
         } else {
             self.items.removeAll()
         }
-        print("update UI")
         self.tableView.reloadData()
     }
     

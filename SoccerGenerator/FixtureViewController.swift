@@ -23,6 +23,7 @@ class FixtureViewController: UIViewController, UITabBarControllerDelegate, UITab
     }
     
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+        print("tab selected fixture view controller")
         if (viewController == self) {
             updateUI()
         }
@@ -68,10 +69,10 @@ class FixtureViewController: UIViewController, UITabBarControllerDelegate, UITab
         var score: String
         var backgroundColor: UIColor
         if (match.played) {
-            backgroundColor = UIColor(red: 155/255.0, green: 193/255.0, blue: 255/255.0, alpha: 0.5)
+            backgroundColor = UIColor(red: 155/255.0, green: 193/255.0, blue: 255/255.0, alpha: 0.6)
             score = "\(match.localGoals) - \(match.awayGoals)"
         } else {
-            backgroundColor = UIColor(red: 155/255.0, green: 255/255.0, blue: 167/255.0, alpha: 0.5)
+            backgroundColor = UIColor(red: 155/255.0, green: 193/255.0, blue: 255/255.0, alpha: 0.25)
             score = "-"
         }
         
