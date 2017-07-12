@@ -11,6 +11,8 @@ import UIKit
 
 public class RoundTableViewCell: UITableViewCell {
     
-    
+    @IBOutlet weak var localTeamLabel: UILabel!
+    @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var awayTeamLabel: UILabel!
     
 }

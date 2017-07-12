@@ -62,6 +62,22 @@ class FixtureViewController: UIViewController, UITabBarControllerDelegate, UITab
         let cell = tableView.dequeueReusableCell(withIdentifier: FixtureViewController.cellIdentifier, for: indexPath) as! RoundTableViewCell
         let match = Array(self.items)[indexPath.section].value[indexPath.row]
         
+        cell.localTeamLabel.text = match.local?.team
+        cell.awayTeamLabel.text = match.away?.team
+        
+        var score: String
+//        var backgroundColor: UIColor
+        if (match.played) {
+//            backgroundColor = UIColor.blue
+            score = "\(match.localGoals) - \(match.awayGoals)"
+        } else {
+//            backgroundColor = UIColor.green
+            score = "-"
+        }
+        
+//        cell.backgroundColor = backgroundColor
+        cell.scoreLabel.text = score
+        
         return cell
     }
     
