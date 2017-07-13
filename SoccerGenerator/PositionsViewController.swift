@@ -31,7 +31,7 @@ class PositionsViewController: UIViewController, UITabBarControllerDelegate, UIT
             let tours = snapshot.value as? [String : AnyObject] ?? [:]
             for t in tours {
                 let tournament = Mapper<Tournament>().map(JSONObject: t.value)
-                print("tournament name = \(tournament?.name)")
+                tournament?.id = t.key
                 let selected = StorageUtils.shared.getSelectedTournament()
                 if (selected?.name == tournament?.name) {
                     self.items.removeAll()

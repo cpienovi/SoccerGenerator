@@ -28,6 +28,7 @@ class MyTournamentsViewController: UITableViewController {
             let tours = snapshot.value as? [String : AnyObject] ?? [:]
             for t in tours {
                 let tournament = Mapper<Tournament>().map(JSONObject: t.value)
+                tournament?.id = t.key
                 self.tournaments.append(tournament!)
             }
             

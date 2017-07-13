@@ -12,6 +12,7 @@ import ObjectMapper
 
 public class Tournament: Mappable {
     
+    var id: String = ""
     var name: String = ""
     var schedule: [[Match]] = [[Match]]()
     
@@ -100,7 +101,15 @@ public class Tournament: Mappable {
     
     func saveToFireBase(database: DatabaseReference) {
         let dictionary = Mapper<Tournament>().toJSON(self)
-        let child = database.child("tournaments").childByAutoId()
+        var child = database.child("tournaments")
+        
+        if (!self.id.isEmpty) {
+            child = child.child(self.id)
+        } else {
+            child = child.childByAutoId()
+            self.id = child.key
+        }
+        
         child.updateChildValues(dictionary)
     }
     
