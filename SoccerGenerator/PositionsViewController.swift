@@ -8,6 +8,8 @@
 
 import Foundation
 import UIKit
+import FirebaseDatabase
+import ObjectMapper
 
 class PositionsViewController: UIViewController, UITabBarControllerDelegate, UITableViewDelegate, UITableViewDataSource {
     
@@ -16,10 +18,34 @@ class PositionsViewController: UIViewController, UITabBarControllerDelegate, UIT
     @IBOutlet weak var tableView: UITableView!
     
     var items = [Position]()
+    var refHandle: UInt?
+    var database: DatabaseReference!
     
     override func viewDidLoad() {
         self.tabBarController?.delegate = self
+        self.database = Database.database().reference()
+        
         updateUI()
+        
+        self.refHandle = self.database.child("tournaments").observe(DataEventType.value, with: { (snapshot) in
+            let tours = snapshot.value as? [String : AnyObject] ?? [:]
+            for t in tours {
+                let tournament = Mapper<Tournament>().map(JSONObject: t.value)
+                print("tournament name = \(tournament?.name)")
+                let selected = StorageUtils.shared.getSelectedTournament()
+                if (selected?.name == tournament?.name) {
+                    self.items.removeAll()
+                    self.items = (tournament?.toPositions())!
+                    self.tableView.reloadData()
+                }
+            }
+        })
+    }
+    
+    deinit {
+        if let refHandle = self.refHandle {
+            self.database.removeObserver(withHandle: refHandle)
+        }
     }
     
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
