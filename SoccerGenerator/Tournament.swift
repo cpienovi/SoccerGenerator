@@ -70,13 +70,15 @@ public class Tournament: Mappable {
                 localInList = true
                 let won = match.localGoals > match.awayGoals
                 let draw = match.localGoals == match.awayGoals
-                pos.addMatch(won: won, draw: draw, lost: !won, scored: match.localGoals, against: match.awayGoals)
+                let lost = match.localGoals < match.awayGoals
+                pos.addMatch(won: won, draw: draw, lost: lost, scored: match.localGoals, against: match.awayGoals)
             }
             if (pos.team == match.away?.team) {
                 awayInList = true
                 let won = match.awayGoals > match.localGoals
                 let draw = match.awayGoals == match.localGoals
-                pos.addMatch(won: won, draw: draw, lost: !won, scored: match.awayGoals, against: match.localGoals)
+                let lost = match.awayGoals < match.localGoals
+                pos.addMatch(won: won, draw: draw, lost: lost, scored: match.awayGoals, against: match.localGoals)
             }
         }
         
@@ -84,7 +86,8 @@ public class Tournament: Mappable {
             let newPosition = Position(team: (match.local?.team)!, wins: 0, draws: 0, losses: 0, scored: 0, against: 0)
             let won = match.localGoals > match.awayGoals
             let draw = match.localGoals == match.awayGoals
-            newPosition.addMatch(won: won, draw: draw, lost: !won, scored: match.localGoals, against: match.awayGoals)
+            let lost = match.localGoals < match.awayGoals
+            newPosition.addMatch(won: won, draw: draw, lost: lost, scored: match.localGoals, against: match.awayGoals)
             result.append(newPosition)
         }
         
@@ -92,7 +95,8 @@ public class Tournament: Mappable {
             let newPosition = Position(team: (match.away?.team)!, wins: 0, draws: 0, losses: 0, scored: 0, against: 0)
             let won = match.awayGoals > match.localGoals
             let draw = match.awayGoals == match.localGoals
-            newPosition.addMatch(won: won, draw: draw, lost: !won, scored: match.awayGoals, against: match.localGoals)
+            let lost = match.awayGoals < match.localGoals
+            newPosition.addMatch(won: won, draw: draw, lost: lost, scored: match.awayGoals, against: match.localGoals)
             result.append(newPosition)
         }
         
